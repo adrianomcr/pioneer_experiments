@@ -9,7 +9,7 @@
 
 
 <!--Run the node that will read a trajectory from the file and publish to the controller-->
-<node pkg = "pioneer_experiments" name = "trajectory_planner" type = "example_trajectories_pioneer.py" args="3 1000" output="screen">
+<node pkg = "pioneer_experiments" name = "trajectory_planner" type = "example_trajectories_pioneer.py" args="2 1000" output="screen">
 </node>
 <!-- arg=1  ::  Dijkstra Points Combined    -->
 <!-- arg=2  ::  Dijkstra Points Energy      -->

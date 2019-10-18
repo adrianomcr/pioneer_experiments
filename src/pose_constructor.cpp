@@ -101,7 +101,7 @@ int main(int argc, char **argv) {
   ros::Subscriber gps_sub = nh.subscribe<sensor_msgs::NavSatFix>("/fix", 1, gps_callback);
   ros::Subscriber imu_sub = nh.subscribe<sensor_msgs::Imu>("/imu/data", 1, imu_callback);
   ros::Publisher pose_pub = nh.advertise<geometry_msgs::Pose>("/espeleo/pose_gps_imu", 1);
-  ros::Publisher rviz_pose_pub = nh.advertise<visualization_msgs::Marker>("/visualization_marker_espeleo_itv", 1);
+  ros::Publisher rviz_pose_pub = nh.advertise<visualization_msgs::Marker>("/visualization_marker_espeleo_pioneer", 1);
   ros::Rate loop_rate(freq);
 
 
@@ -119,12 +119,14 @@ int main(int argc, char **argv) {
 
 
   string resultsFile;
-  nh.param<std::string>( "/espeleo/experimentResultsFile", resultsFile, "/home/espeleo/results.txt" );
+  // nh.param<std::string>( "/espeleo/experimentResultsFile", resultsFile, "/home/roomba/results.txt" );
+  nh.param<std::string>( "/espeleo/experimentResultsFile", resultsFile, "/home/results_pioneer.txt" );
 
   FILE *f;
+  printf("%s",resultsFile.c_str());
   f = fopen(resultsFile.c_str(), "w");
   if (f==NULL){
-    ROS_ERROR("Can not open file 'results.txt'.");
+    ROS_ERROR("\33[91mCan not open file 'results.txt'.\33[0m");
     return -1;
   }
 

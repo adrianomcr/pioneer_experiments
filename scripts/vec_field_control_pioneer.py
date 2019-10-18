@@ -294,7 +294,7 @@ def vector_field():
     i = 0
 
     # Publisher for Twist message
-    pub_cmd_vel = rospy.Publisher("/cmd_vel", Twist, queue_size=1)
+    pub_cmd_vel = rospy.Publisher("/pioneer/cmd_vel", Twist, queue_size=1)
     # Init node
     rospy.init_node("vector_field")
     # Subscribers

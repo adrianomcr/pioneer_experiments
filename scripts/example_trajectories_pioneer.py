@@ -32,13 +32,13 @@ def refference_trajectory_1(N):
     # Geometric parameters
     # a = 15.0 # height of the "8"
     # b = 7.0 # width of the "8"
-    a = 7.0/2.0 # height of the "8"
-    b = 14.0/2.0 # width of the "8"
+    a = 12.0/2.0 # height of the "8"
+    b = 6.0/2.0 # width of the "8"
 
 
     cx = 0 # center x
     cy = 0.0 # center y
-    phi = -52*pi/180.0 # rotation angle of the curve
+    phi = -52*pi/180.0 + pi/2.0 # rotation angle of the curve
 
     # Parameter
     dp = 2*pi/N
