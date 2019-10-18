@@ -13,7 +13,7 @@ Run the driver
 
 Generate a example trajectory
 
-`roslaunch pioneer_experiments experimento_pioneer_control.launch`
+`roslaunch pioneer_experiments experimento_pioneer_traj.launch`
 
 Available trajectories:
 
